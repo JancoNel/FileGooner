@@ -1,4 +1,5 @@
 -- File gooner
+-- MIT License or whatever
 -- Uses gemini API key from environment variable
 -- To sort files in spesified directory
 
