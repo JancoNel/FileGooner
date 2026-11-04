@@ -5,6 +5,7 @@
 local lfs = require("lfs")
 local ask_gemini = require("gemini")
 local json = require("dkjson")
+local clean_empty_directories = require("cleanup")
 
 local function  gooner()
     print("FileGooner executting...")
@@ -168,3 +169,7 @@ for _, move in ipairs(moves) do
 
     ::continue::
 end
+
+-- Clean up
+local removed_directories = clean_empty_directories(target_directory)
+print("Removed " .. removed_directories .. " empty director" .. (removed_directories == 1 and "y." or "ies."))
